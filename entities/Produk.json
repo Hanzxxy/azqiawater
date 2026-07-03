@@ -1,0 +1,48 @@
+{
+  "name": "Produk",
+  "type": "object",
+  "properties": {
+    "nama_produk": {
+      "type": "string",
+      "description": "Nama produk"
+    },
+    "harga": {
+      "type": "number",
+      "description": "Harga produk"
+    },
+    "stok": {
+      "type": "number",
+      "description": "Jumlah stok"
+    },
+    "kategori": {
+      "type": "string",
+      "enum": [
+        "Galon Isi Ulang",
+        "Galon Baru",
+        "Gas Isi Ulang",
+        "Gas Baru",
+        "Lainnya"
+      ],
+      "description": "Kategori produk"
+    },
+    "gambar": {
+      "type": "string",
+      "description": "URL gambar produk"
+    },
+    "deskripsi": {
+      "type": "string",
+      "description": "Deskripsi produk"
+    },
+    "aktif": {
+      "type": "boolean",
+      "default": true,
+      "description": "Status produk aktif/tidak"
+    }
+  },
+  "required": [
+    "nama_produk",
+    "harga",
+    "stok",
+    "kategori"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "nama_pembeli": {
+      "type": "string",
+      "description": "Nama pembeli"
+    },
+    "alamat": {
+      "type": "string",
+      "description": "Alamat pengiriman"
+    },
+    "no_hp": {
+      "type": "string",
+      "description": "Nomor HP pembeli"
+    },
+    "items": {
+      "type": "array",
+      "description": "Detail item pesanan",
+      "items": {
+        "type": "object",
+        "properties": {
+          "produk_id": {
+            "type": "string"
+          },
+          "nama_produk": {
+            "type": "string"
+          },
+          "harga": {
+            "type": "number"
+          },
+          "jumlah": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "number",
+      "description": "Total harga"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Menunggu",
+        "Diproses",
+        "Dikirim",
+        "Selesai",
+        "Dibatalkan"
+      ],
+      "default": "Menunggu",
+      "description": "Status pesanan"
+    },
+    "catatan": {
+      "type": "string",
+      "description": "Catatan dari pembeli"
+    }
+  },
+  "required": [
+    "nama_pembeli",
+    "alamat",
+    "no_hp",
+    "total",
+    "status"
+  ]
+}

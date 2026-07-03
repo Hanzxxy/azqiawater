@@ -1,0 +1,30 @@
+{
+  "name": "Setting",
+  "type": "object",
+  "properties": {
+    "nama_toko": {
+      "type": "string",
+      "description": "Nama toko"
+    },
+    "alamat_toko": {
+      "type": "string",
+      "description": "Alamat toko"
+    },
+    "no_hp_admin": {
+      "type": "string",
+      "description": "No HP admin untuk WhatsApp"
+    },
+    "logo": {
+      "type": "string",
+      "description": "URL logo toko"
+    },
+    "deskripsi": {
+      "type": "string",
+      "description": "Deskripsi toko"
+    }
+  },
+  "required": [
+    "nama_toko",
+    "no_hp_admin"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Transaksi",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "description": "Detail item transaksi",
+      "items": {
+        "type": "object",
+        "properties": {
+          "produk_id": {
+            "type": "string"
+          },
+          "nama_produk": {
+            "type": "string"
+          },
+          "harga": {
+            "type": "number"
+          },
+          "jumlah": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "number",
+      "description": "Total transaksi"
+    },
+    "bayar": {
+      "type": "number",
+      "description": "Jumlah uang yang dibayarkan"
+    },
+    "kembalian": {
+      "type": "number",
+      "description": "Kembalian"
+    },
+    "metode_bayar": {
+      "type": "string",
+      "enum": [
+        "Tunai",
+        "Transfer",
+        "QRIS"
+      ],
+      "default": "Tunai",
+      "description": "Metode pembayaran"
+    }
+  },
+  "required": [
+    "total",
+    "items"
+  ]
+}

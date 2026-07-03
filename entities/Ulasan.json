@@ -1,0 +1,27 @@
+{
+  "name": "Ulasan",
+  "type": "object",
+  "properties": {
+    "produk_id": {
+      "type": "string",
+      "description": "ID produk yang diulas"
+    },
+    "nama_pembeli": {
+      "type": "string",
+      "description": "Nama pembeli"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating 1-5"
+    },
+    "komentar": {
+      "type": "string",
+      "description": "Komentar ulasan"
+    }
+  },
+  "required": [
+    "produk_id",
+    "nama_pembeli",
+    "rating"
+  ]
+}
